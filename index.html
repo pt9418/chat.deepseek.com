@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇宙主题网站</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="username">未登录</div>
+        </div>
+    </header>
+    <main>
+        <h1>欢迎来到我的宇宙</h1>
+        <div class="chat-container">
+            <div id="chat-window" class="chat-window"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="输入消息...">
+                <button id="send-btn">发送</button>
+                <button id="clear-btn">清空</button>
+            </div>
+        </div>
+    </main>
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
