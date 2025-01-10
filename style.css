@@ -1,0 +1,171 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.nav-left a:hover {
+    opacity: 0.8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon {
+    font-size: 20px;
+}
+
+.username {
+    color: white;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px;
+    background-image: url('https://www.nasa.gov/wp-content/uploads/2025/01/1-pia26492-nisar-horizon.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.welcome-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    margin-top: 20vh;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.welcome-title:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(5px);
+}
+
+#chat-window {
+    height: 200px;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.bot-message {
+    text-align: left;
+}
+
+.message-content {
+    display: inline-block;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.user-message .message-content {
+    background-color: #007bff;
+    color: white;
+}
+
+.bot-message .message-content {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2rem;
+        margin-top: 10vh;
+    }
+    
+    .chat-container {
+        width: 95%;
+    }
+    
+    #chat-window {
+        height: 300px;
+    }
+}
